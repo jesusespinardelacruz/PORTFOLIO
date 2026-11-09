@@ -1,0 +1,94 @@
+footer {
+    padding: 25px;
+    background-color: $bg-secondary-color;
+    height: 120px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height: 1px;
+        background-color: white;
+    }    
+   
+    div {
+        
+        h2{
+            font-size: 24px;
+            text-align: center;
+        }
+        .social-icons{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+    }
+    @include tablet{
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                font-size: 32px;
+                text-align: none;
+            }
+            .social-icons{
+                margin: 0px;
+                display: flex;
+                align-items: center;
+             margin-top: 0px;
+             img{
+                width: 30px;
+                height: 30px;
+                }   
+
+            }
+
+        }
+
+    }
+    @include desktop{
+        padding: 50px 80px;
+        &::before {
+            width: 87%;
+        }    
+        div{
+          
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         
+            h2{
+                font-size: 24px;
+                text-align: none;
+            }
+            .social-icons{
+                margin: 0px;
+          
+             img{
+                width: 24px;
+                height: 24px;
+                &:hover {
+                    filter: brightness(0) saturate(100%)
+                        invert(83%) sepia(34%)
+                        saturate(704%) hue-rotate(88deg)
+                        brightness(94%) contrast(91%);
+                    }
+                }   
+
+            }
+        }
+    }
+}

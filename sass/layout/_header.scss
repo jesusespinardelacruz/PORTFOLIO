@@ -1,0 +1,98 @@
+header{
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+   
+    .header {
+        
+        h2{
+            font-size: 24px;
+            text-align: center;
+        }
+        .social-icons{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+    }
+    @include tablet{
+       
+        margin: 0px;
+        padding-top: 20px;
+        width: auto;
+        height: 600px;
+        background-image: 
+            url("../img/adamkeyes.png");
+            background-repeat: no-repeat;
+            background-size:322px 600px ;
+            background-position: top right;
+
+       
+        .header {
+            margin: 0px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            
+            h2{
+                font-size: 32px;
+                text-align: none;
+            }
+            .social-icons{
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                margin-top: 0px;
+             img{
+                width: 30px;
+                height: 30px;
+                }   
+
+            }
+
+        }
+
+    }
+    @include desktop{
+        height: 720px;
+        background-image: 
+            url("../img/adamkeyes.png");
+            background-repeat: no-repeat;
+            background-size:445px 720px ;
+            background-position: top right;
+        
+        div{
+          
+            display: block;
+            
+            h2{
+                font-size: 32px;
+                
+            }
+            .social-icons{
+                margin: 0px;
+          
+             img{
+                width: 24px;
+                height: 24px;
+                &:hover {
+                    filter: brightness(0) saturate(100%)
+                        invert(83%) sepia(34%)
+                        saturate(704%) hue-rotate(88deg)
+                        brightness(94%) contrast(91%);
+                }
+            }   
+
+        }
+    }
+}
+}

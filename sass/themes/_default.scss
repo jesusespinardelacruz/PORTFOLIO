@@ -1,0 +1,31 @@
+
+body {
+    overflow-x: hidden;
+    background-color: $bg-principal-color;
+    
+} 
+header{
+    margin: 20px;
+    overflow: hidden;
+    @include tablet{
+        margin: 0px;
+    }
+    @include desktop{
+        padding-top: 20px;
+        margin: 0px 80px ;
+    }
+}
+
+main{
+    margin: 20px;
+    overflow: hidden;
+    @include tablet{
+        margin: 0px 0px;
+    }
+    @include desktop{
+        margin: 20px 80px;
+    }
+}
+
+
+

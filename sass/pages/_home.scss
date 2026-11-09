@@ -1,0 +1,212 @@
+//HERO
+
+//mobile first
+.hero{
+    height: 600px;
+    .img-hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        
+        z-index: 0;
+        overflow: hidden;
+        isolation: isolate;
+        img{
+            width: 174px;
+            height: 283px;
+            object-fit: cover; 
+            --degradado: 150px;
+            mask-image: linear-gradient(
+            to bottom,
+            transparent 0%,
+             black calc(100% - var(--degradado))
+            ); 
+           
+        }
+    }
+        
+    
+    .hero-content{
+        margin-top: 40px;
+        h1{
+            text-align: center;
+            .green-line {
+                position: relative;
+                display: inline-block;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $line-color;
+                    bottom: 0px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+        p {
+            display: none;
+        }
+        .cta {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    }
+    //tablet
+    @include tablet{
+        .img-hero{
+                display: none;
+            }
+        .hero-content{
+            margin-top: 35px;
+            padding-left: 25px;
+            width: 600px;
+            br{
+                display: none;
+            }
+            .salto{
+                display: block;
+            }
+            h1{
+                text-align: left;
+                white-space: pre-line;
+                .exclamation{
+                    display: none;
+                }
+            }
+            p{
+                display: block;
+                margin-top: 35px;
+                width: 70%;
+            }
+            .cta{
+                margin-top: 35px;
+                justify-content: left;
+            }
+            
+
+        }
+
+    }
+    //Desktop
+    @include desktop{
+       .hero-content{
+        margin-top: 100px;
+        width: 70%;
+            h1{
+                white-space: normal;
+                .exclamation{
+                    display: none;
+                }
+                .salto{
+                    display: inline;
+                }
+                .green-line{
+                    &::after{
+                        height: 5px;
+                        z-index: -1;
+                    }
+                }
+            }
+            p{
+                width: 50%;;
+            }
+            .cta{
+                margin-top: 50px;
+            }
+        
+        }
+    }
+    
+}
+
+//PROJECTS
+.projects{
+    margin-top: 80px;
+    
+    .header-projects{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        h2{
+            align-self:end;
+            line-height: 1.2;
+        }
+    }
+    @include tablet{
+        margin: 80px 25px 0px 25px;
+        
+        @include desktop{
+            .header-projects{
+                margin-bottom: 50px;
+            }
+
+        }
+    }
+        
+}
+
+//CONTACT
+
+.form {
+    background-color: $bg-secondary-color;
+    margin-top: 50px;
+    padding: 50px 20px;
+    h1 {
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .contact-form{
+        margin-bottom: 50px;
+    }
+
+    @include tablet{
+        p{
+            width: 445px;
+            justify-self: center;
+        }
+    }
+
+    @include desktop{
+        padding: 80px 80px 50px 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: start;
+
+        .info-form {
+            grid-column: 1;
+        }
+
+        form {
+            grid-column: 2;
+            width: 100%;
+            min-width: 0;
+        }
+        
+        
+        h1, p {
+            text-align: left;
+            justify-self: left;
+        }
+        
+
+    }
+
+
+    
+}
+

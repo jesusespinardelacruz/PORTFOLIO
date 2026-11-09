@@ -1,0 +1,94 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 450px;
+    margin: 0 auto;
+        
+    button {
+        align-self: flex-end;
+        padding: 10px 0;
+    }
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+    }
+
+    input,textarea {
+        width: 100%;
+        padding: 12px 15px;
+        box-sizing: border-box;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: $text-principal-color;
+        font-family: $principal-font;
+        font-size: 14px;
+        font-weight: 300;
+        outline: none;
+        resize: none;
+
+        &::placeholder {
+            color: $text-secondary-color;
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $line-color;
+        }
+    }
+    
+
+    // Invalid input
+
+    input[type="email"]:not(:placeholder-shown):invalid {
+        border-bottom: 1px solid #FF6F5B;
+    }
+
+    .error-message {
+        display: none;
+        color: #FF6F5B;
+        font-family: $principal-font;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: right;
+        margin-top: 5px;
+    }
+
+    .error-icon {
+        position: absolute;
+        right: 5px;
+        top: 12px;
+        width: 20px;
+        height: 20px;
+        display: none;
+        pointer-events: none;
+    }
+
+    // Show Error Icon
+    input[type="email"]:not(:placeholder-shown):invalid
+    + .error-icon {
+        display: block;
+    }
+
+    // Show Error Message
+    input[type="email"]:not(:placeholder-shown):invalid
+    ~ .error-message {
+        display: block;
+    }
+}    

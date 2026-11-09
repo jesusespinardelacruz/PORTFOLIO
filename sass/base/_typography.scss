@@ -1,0 +1,86 @@
+//MOBILE
+h1 {
+    //MOBILE
+    font-family: $principal-font;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.14;
+    color: $text-principal-color;
+
+    //TABLET
+    @include tablet{
+        font-size: 72px;
+        line-height: 1.15;
+    }
+   
+    //DESKTOP
+    @include desktop{
+        font-size: 79px;
+        
+
+    }
+}
+
+h2 {
+    //MOBILE
+    font-family: $principal-font;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.14;
+    color: $text-principal-color;
+
+    //TABLET
+    @include tablet{
+        font-size: 72px;
+        line-height: 2.05;
+    }
+   
+    //DESKTOP
+    @include desktop{
+        font-size: 88px;
+        line-height: 1.2;
+
+    }
+    
+}
+
+h3{
+    //MOBILE
+    font-family: $principal-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1.14;
+    color: $text-principal-color;
+
+    //TABLET
+    @include tablet{
+        font-size: 24px;
+        line-height: 2.05;
+    }
+   
+    //DESKTOP
+    @include desktop{
+        font-size: 32px;
+        line-height: 1.05;
+
+    }
+
+}
+
+p {
+    //MOBILE
+    font-family: $principal-font;
+    font-weight: 300;
+    font-size: 18px;
+    color: $text-secondary-color;
+    
+    //TABLE & DESKTOP
+    @include tablet{
+        font-size: 18px;
+    }
+    @include desktop{
+        font-size: 18px;
+    }
+
+}
